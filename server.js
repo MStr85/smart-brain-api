@@ -1,6 +1,5 @@
 const express = require('express');
 const bcrypt = require('bcrypt-nodejs');
-const app = express();
 const cors = require('cors');
 const knex = require('knex');
 const register = require('./controllers/register');
@@ -18,10 +17,12 @@ const db = knex({
   }
 });
 
-db.select('*').from('users').then(data => {
+/* db.select('*').from('users').then(data => {
 	console.log(data);
 });
+*/
 
+const app = express();
 app.use(express.json());
 app.use(cors());
 
