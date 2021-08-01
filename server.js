@@ -14,7 +14,7 @@ const db = knex({
     //user : 'marek',
     //password : '',
     //database : 'smart-brain'
-    host : process.env.DATABASE_URL,
+    connectionString : process.env.DATABASE_URL,
     ssl: true,
   }
 });
