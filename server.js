@@ -26,7 +26,7 @@ const db = knex({
 });
 */
 
-const whitelist = ['https://arcane-dawn-52860.herokuapp.com']
+const whitelist = ['http://localhost:3000']
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
