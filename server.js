@@ -71,7 +71,8 @@ app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 app.post('/signin', signin.handleSignin(db, bcrypt))
 app.post('/register', register.handleRegister(db, bcrypt))
 app.get('/profile/:id', profile.handleProfileGet(db))
-app.put('/image', image.handleImage(db))
+//app.put('/image', image.handleImage(db))
+app.put('/image', (req, res) => { image.handleImage(req, res, db) })
 app.post('/imageurl', (req, res) => { image.handleApiCall(req, res) })
 
 app.listen(process.env.PORT || 3000, () => {
